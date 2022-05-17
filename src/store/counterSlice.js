@@ -4,6 +4,7 @@ import {
 
 const initialState = {
     value: 0,
+    list_cuadernos: [1,2,3]
 }
 
 export const counterSlice = createSlice({
@@ -16,9 +17,15 @@ export const counterSlice = createSlice({
             // which detects changes to a "draft state" and produces a brand new
             // immutable state based off those changes
             state.value += 1
+            // const result = await api.post('/post')
+            // state.list_cuadernos = [...result]
         },
         decrement: (state) => {
             state.value -= 1
+        },
+        addElements: (state) => {
+            const moreElements = [4,5,6]
+            state.list_cuadernos = [...state.list_cuadernos, moreElements]
         },
         incrementByAmount: (state, action) => {
             state.value += action.payload
@@ -30,7 +37,8 @@ export const counterSlice = createSlice({
 export const {
     increment,
     decrement,
-    incrementByAmount
+    incrementByAmount,
+    addElements,
 } = counterSlice.actions
 
 export default counterSlice.reducer
