@@ -72,13 +72,13 @@ export default function SignIn() {
                     {
                     loginState.error &&
                     <Stack sx={{ width: '100%' }} spacing={2}>
-                        <Alert severity="error">This is an error alert — check it out!</Alert>            
+                        <Alert severity="error" name="alert-error">This is an error alert — check it out!</Alert>            
                     </Stack>
                     }
                     <FormControlLabel control={<Checkbox value="remember" color="primary" />}
                     label="Remember me"
                     />
-                    <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
+                    <Button type="submit" name="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
                         Sign In
                     </Button>
                     <Grid container>
