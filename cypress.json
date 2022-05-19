@@ -1,4 +1,8 @@
 {
     "video": false,
-    "screenshotOnRunFailure": false
+    "screenshotOnRunFailure": false,
+    "env": {
+        "HOST": "http://0.0.0.0:3000/",
+        "HOST_API": "http://192.168.0.105:1337/"
+    }
 }

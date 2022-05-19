@@ -33,8 +33,7 @@ return (
 
 const theme = createTheme();
 
-export default function SignIn() {
-
+export default function SignIn() {    
     const dispatch = useDispatch()
     const loginState = useSelector((state) => state.login)
     const handleSubmit = (event) => {
@@ -44,7 +43,7 @@ export default function SignIn() {
             identifier: data.get('email'),
             password: data.get('password'),
         }
-        console.log(dataForm);
+        // console.log(dataForm);
         dispatch(auth(dataForm))
     };
 

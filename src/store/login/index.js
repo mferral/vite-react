@@ -13,8 +13,12 @@ const loginSlice = createSlice({
     extraReducers: {        
         [auth.fulfilled]: (state, { payload }) => {
             state.loading = false
-            state.error = payload.jwt ? false : true
-            state.result = payload
+            
+            if (payload.jwt) {
+                localStorage.setItem('token', payload.jwt)
+                window.location.href ='/dashboard'
+            } else state.error = true
+            // state.result = payload
         },
     },
 })

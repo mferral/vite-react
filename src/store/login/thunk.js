@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit'
 export const auth = createAsyncThunk(
     'login/auth',
     async (data, thunkAPI) => {        
-        const res = await fetch('http://localhost:1337/auth/local',{
+        const res = await fetch(`${import.meta.env.VITE_HOST}auth/local`,{
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
