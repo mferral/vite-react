@@ -10,7 +10,6 @@ export const articulosList = createAsyncThunk(
                 'Authorization': `Bearer ${localStorage.getItem('token')}`
             },            
             }).then((data) => {
-                console.log();
                 if (data.status == 401) window.location.href ='/login'
                 return data.json()
             })               
