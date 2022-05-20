@@ -1,0 +1,14 @@
+version: "3"
+services: 
+  test:
+    build:
+      context: ./test  
+    container_name: cypress    
+    command: >
+      sh -c "cd /app &&
+            npm i &&
+            (npm run dev&) &&
+            cd /test &&
+            npx cypress run"
+    volumes:
+      - ./:/app    

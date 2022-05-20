@@ -15,11 +15,10 @@ const dispatch = useDispatch()
 useEffect(() => {
     dispatch(articulosList())
 }, [])
-
+console.log('Hola');
 return (
 <div>
-    <div>                
-        
+    <div>                        
         <TableContainer component={Paper}>
         <Table size='small' name="table-articulos" aria-label="table">
         <TableHead>
